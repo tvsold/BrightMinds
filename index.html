@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Minds - Abacus Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background-color: #fef6ec;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #fdd96d;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 80px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    .intro {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .card {
+      background-color: #fff9ed;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #e67e22;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .animate {
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG_3779.PNG" alt="Bright Minds Logo">
+    <h1 class="animate">Bright Minds</h1>
+  </header>
+
+  <div class="intro animate">
+    <p>Welcome to Bright Minds — where young learners unlock their full potential through the power of the abacus! Explore numbers, memory, and mental math in a fun and colorful way!</p>
+  </div>
+
+  <section class="section">
+    <div class="card animate">
+      <h3>What is an Abacus?</h3>
+      <p>An abacus is a visual math tool that helps kids learn counting, addition, subtraction, and even multiplication using colorful beads.</p>
+    </div>
+    <div class="card animate">
+      <h3>Benefits</h3>
+      <p>Improves memory, concentration, and problem-solving skills. Boosts confidence and makes math fun!</p>
+    </div>
+    <div class="card animate">
+      <h3>Get Started</h3>
+      <p>Follow along with our tutorials and activities to master the abacus step-by-step.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bright Minds. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const animated = document.querySelectorAll('.animate');
+      animated.forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.3}s`;
+      });
+    });
+  </script>
+</body>
+</html>
