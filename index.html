@@ -24,46 +24,49 @@
     .left-box {
       background: #ff61a6;
       color: #fff;
-      padding: 3rem;
-      font-size: 3rem;
-      line-height: 1.4;
-      text-shadow: 2px 2px #000;
-      border-radius: 25px;
-      box-shadow: 0 0 0 10px #ec407a, inset 0 0 0 5px #fff;
+      padding: 4rem;
+      font-size: 6rem;
+      line-height: 1.2;
+      text-shadow: 4px 4px #000;
+      border-radius: 30px;
+      box-shadow: 0 0 0 12px #ec407a, inset 0 0 0 6px #fff;
+      animation: typing 3s steps(20) 1 forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
     }
     .right-content {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 1.5rem;
+      gap: 2rem;
     }
     .get-started {
-      font-size: 1rem;
-      background: transparent;
+      font-size: 2rem;
       color: #d500f9;
-      border: none;
-      text-shadow: 1px 1px #000;
-      animation: typing 2s steps(20) infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 15ch;
+      text-shadow: 2px 2px #000;
+      animation: blink 1.5s steps(2, start) infinite;
     }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 15ch; }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
     .btn-box {
       background: #fff;
-      padding: 1rem 2rem;
-      font-size: 0.7rem;
+      padding: 1.5rem 3rem;
+      font-size: 1rem;
       color: #000;
-      border-radius: 12px;
-      box-shadow: 4px 4px 0 #000;
+      border-radius: 16px;
+      box-shadow: 6px 6px 0 #000;
       text-decoration: none;
       transition: transform 0.2s ease;
     }
     .btn-box:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
       background-color: #ffeb3b;
     }
     @media (max-width: 900px) {
@@ -74,7 +77,8 @@
       }
       .left-box {
         margin-bottom: 2rem;
-        font-size: 2rem;
+        font-size: 3rem;
+        width: 100% !important;
       }
       .right-content {
         align-items: center;
@@ -84,9 +88,7 @@
 </head>
 <body>
   <div class="hero">
-    <div class="left-box">
-      Bright<br>Minds
-    </div>
+    <div class="left-box">Bright Minds</div>
     <div class="right-content">
       <div class="get-started">get started</div>
       <a href="#signup" class="btn-box">Sign-Up</a>
@@ -95,4 +97,5 @@
   </div>
 </body>
 </html>
+
 
